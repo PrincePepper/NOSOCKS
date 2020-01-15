@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/numQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:text="Первый вопрос:"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Какой нравится стиль?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numQuiz" />
+
+    <ru.katso.livebutton.LiveButton
+        android:id="@+id/firstBtn"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="яркий"
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:backgroundColor="#D81B60"
+        app:corners="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz"
+        app:layout_constraintVertical_bias="0.25"
+        app:normalHeight="10dp"
+        app:pressedHeight="3dp"
+        app:shadowColor="#969696" />
+
+    <ru.katso.livebutton.LiveButton
+        android:id="@+id/secondBtn"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="минимализм"
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:backgroundColor="#D81B60"
+        app:corners="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz"
+        app:layout_constraintVertical_bias="0.25"
+        app:normalHeight="10dp"
+        app:pressedHeight="3dp"
+        app:shadowColor="#969696" />
+</androidx.constraintlayout.widget.ConstraintLayout>
