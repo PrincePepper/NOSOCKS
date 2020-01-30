@@ -1,5 +1,6 @@
 package com.example.nosocks;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -153,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     //Create color picker view
 
 
-                    View view = this.getLayoutInflater().inflate(R.layout.holocolorpicker, null);
+                    @SuppressLint("InflateParams") View view = this.getLayoutInflater().inflate(R.layout.holocolorpicker, null);
                     if (view == null) return true;
 
                     //Config picker
@@ -175,13 +177,10 @@ public class MainActivity extends AppCompatActivity {
                     //Config dialog
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setView(view);
-                    builder.setTitle("Choose your color");
+                    builder.setTitle("Выбери свой цвет");
                     builder.setCancelable(true);
-                    builder.setNegativeButton("Cancel", null);
-                    builder.setPositiveButton("OK", (dialog, which) -> {
-                        setNewThemeColor(MainActivity.this, r, g, b);
-
-                    });
+                    builder.setNegativeButton("Отмена", null);
+                    builder.setPositiveButton("OK", (dialog, which) -> setNewThemeColor(MainActivity.this, r, g, b));
                     builder.show();
 
                 } else Toast.makeText(this,"Вернись на главный экран для смены фона",Toast.LENGTH_LONG).show();
@@ -220,7 +219,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        openQuitDialog();
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            openQuitDialog();
+        }
     }
 
     //Вызов меню выхода из приложения
@@ -229,7 +233,12 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder quitDialog = new AlertDialog.Builder(MainActivity.this);
         quitDialog.setTitle("Вы уверены?");
         //Кнопка "ДА"
-        quitDialog.setPositiveButton("ДА", (dialog, which) -> finish());
+        quitDialog.setPositiveButton("ДА", (dialog, which) -> {
+            Intent i = new Intent(Intent.ACTION_MAIN);
+            i.addCategory(Intent.CATEGORY_HOME);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+        });
         //Кнопка "НЕТ"
         quitDialog.setNegativeButton("НЕТ", (dialog, which) -> {
         });
