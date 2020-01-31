@@ -1,4 +1,4 @@
-package com.example.nosocks.ui.home.quiz;
+package ppts.website.nosocks.ui.home.quiz;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,16 +16,16 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import com.example.nosocks.Algoritm;
-import com.example.nosocks.MainActivity;
-import com.example.nosocks.R;
+import ppts.website.nosocks.Algoritm;
+import ppts.website.nosocks.MainActivity;
+import ppts.website.nosocks.R;
 
 import java.util.Objects;
 
 import ru.katso.livebutton.LiveButton;
 
-import static com.example.nosocks.MainActivity.colortheme;
-import static com.example.nosocks.ui.home.quiz.QuizFragment.aaa;
+import static ppts.website.nosocks.MainActivity.colortheme;
+import static ppts.website.nosocks.ui.home.quiz.QuizFragment.aaa;
 
 
 public class Result extends Fragment {
@@ -69,7 +69,7 @@ public class Result extends Fragment {
 
         }, 2000);
 
-        new Handler().postDelayed(this::openDialog, 7000);
+        new Handler().postDelayed(this::openDialog, 5000);
     }
 
     //Вызов меню выхода из приложения

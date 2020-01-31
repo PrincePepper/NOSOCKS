@@ -1,4 +1,4 @@
-package com.example.nosocks.ui.home.quiz;
+package ppts.website.nosocks.ui.home.quiz;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,14 +13,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nosocks.MainActivity;
-import com.example.nosocks.R;
+import ppts.website.nosocks.MainActivity;
+import ppts.website.nosocks.R;
 
 import java.util.Objects;
 
 import ru.katso.livebutton.LiveButton;
 
-import static com.example.nosocks.MainActivity.colortheme;
+import static ppts.website.nosocks.MainActivity.colortheme;
 
 public class QuizFragment extends Fragment {
     private LiveButton firstBtn;

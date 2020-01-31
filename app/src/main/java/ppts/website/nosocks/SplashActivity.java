@@ -1,10 +1,12 @@
-package com.example.nosocks;
+package ppts.website.nosocks;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import ppts.website.nosocks.R;
 
 
 public class SplashActivity extends AppCompatActivity {

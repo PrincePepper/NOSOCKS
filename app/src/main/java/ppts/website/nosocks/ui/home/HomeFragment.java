@@ -1,4 +1,4 @@
-package com.example.nosocks.ui.home;
+package ppts.website.nosocks.ui.home;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,17 +13,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.nosocks.MainActivity;
-import com.example.nosocks.R;
-import com.example.nosocks.ui.home.quiz.QuizFragment;
+import ppts.website.nosocks.MainActivity;
+import ppts.website.nosocks.R;
+import ppts.website.nosocks.ui.home.quiz.QuizFragment;
 
 import java.util.Objects;
 
 import ru.katso.livebutton.LiveButton;
 
-import static com.example.nosocks.ui.home.quiz.QuizFragment.aaa;
-
-import static com.example.nosocks.MainActivity.colortheme;
+import static ppts.website.nosocks.MainActivity.colortheme;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
@@ -32,7 +30,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-        aaa = "";
+        QuizFragment.aaa = "";
 
         SharedPreferences.Editor ed = MainActivity.sPref_fragment.edit();
         ed.putInt(MainActivity.KEY_FRAGMENT, 0);

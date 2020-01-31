@@ -1,4 +1,4 @@
-package com.example.nosocks;
+package ppts.website.nosocks;
 
 import org.junit.Test;
 

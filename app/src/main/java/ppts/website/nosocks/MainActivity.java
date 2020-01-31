@@ -1,10 +1,11 @@
-package com.example.nosocks;
+package ppts.website.nosocks;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +27,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.nosocks.ui.help.HelpFragment;
+import ppts.website.nosocks.R;
+
+import ppts.website.nosocks.ui.help.HelpFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.larswerkman.holocolorpicker.ColorPicker;
 import com.larswerkman.holocolorpicker.SVBar;
@@ -196,7 +199,9 @@ public class MainActivity extends AppCompatActivity {
         colortheme = Color.parseColor("#" + stringColor);
 
         if (isLightActionBar()) setTheme(R.style.AppTheme);
-        setTheme(getResources().getIdentifier("T_" + stringColor, "style", getOpPackageName()));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            setTheme(getResources().getIdentifier("T_" + stringColor, "style", getOpPackageName()));
+        }
     }
 
     public static void setNewThemeColor(AppCompatActivity activity, int red, int green, int blue) {

@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.nosocks.ui.home.HomeFragment"
+        android:name="ppts.website.nosocks.ui.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home"/>
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.nosocks.ui.help.HelpFragment"
+        android:name="ppts.website.nosocks.ui.help.HelpFragment"
         android:label=""
         tools:layout="@layout/fragment_send" />
 </navigation>

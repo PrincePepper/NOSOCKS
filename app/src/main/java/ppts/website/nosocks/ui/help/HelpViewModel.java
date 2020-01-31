@@ -1,4 +1,4 @@
-package com.example.nosocks.ui.help;
+package ppts.website.nosocks.ui.help;
 
 import androidx.lifecycle.ViewModel;
 

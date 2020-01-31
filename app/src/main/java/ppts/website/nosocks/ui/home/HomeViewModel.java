@@ -1,4 +1,4 @@
-package com.example.nosocks.ui.home;
+package ppts.website.nosocks.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

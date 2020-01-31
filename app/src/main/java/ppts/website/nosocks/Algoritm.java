@@ -1,4 +1,4 @@
-package com.example.nosocks;
+package ppts.website.nosocks;
 
 public class Algoritm {
     public String algoritm(String strn) {
