@@ -7,7 +7,7 @@ An example of this work is provided below:
 <img src="./example.gif" width="33%" height="auto" />
 
 The principle is based on code generation, based on the choice of a response in binary code. Under each code was a specific photo with socks.
-  The generation algorithm in the file [Algoritm.java](/nosocks/blob/master/app/src/main/java/ppts/website/nosocks/Algoritm.java)
+  The generation algorithm in the file [Algoritm.java](./app/src/main/java/ppts/website/nosocks/Algoritm.java)
 
 ***The project was released for my University course***
 
