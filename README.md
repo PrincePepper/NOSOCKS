@@ -1,4 +1,4 @@
-#Nosocks
+# Nosocks [No Longer Support]
 ---
 Stupid project for choosing a gift for the new year, namely a variety of socks.
 An example of this work is provided below:
