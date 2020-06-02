@@ -1,5 +1,3 @@
-
-
 #Nosocks
 ---
 Stupid project for choosing a gift for the new year, namely a variety of socks.
