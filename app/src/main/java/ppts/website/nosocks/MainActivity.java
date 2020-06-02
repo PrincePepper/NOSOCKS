@@ -27,13 +27,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import ppts.website.nosocks.R;
-
-import ppts.website.nosocks.ui.help.HelpFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.larswerkman.holocolorpicker.ColorPicker;
 import com.larswerkman.holocolorpicker.SVBar;
 
+import ppts.website.nosocks.ui.help.HelpFragment;
 import ru.katso.livebutton.LiveButton;
 
 
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this.startActivity(SockIntent);
                     break;
                 case R.id.nav_send:
-                    LiveButton liveButton=findViewById(R.id.newyear_button);
+                    LiveButton liveButton = findViewById(R.id.newyear_button);
                     liveButton.setEnabled(false);
                     Fragment fragment = new HelpFragment();
                     FragmentManager fragmentManager = getSupportFragmentManager();
@@ -186,9 +184,10 @@ public class MainActivity extends AppCompatActivity {
                     builder.setPositiveButton("OK", (dialog, which) -> setNewThemeColor(MainActivity.this, r, g, b));
                     builder.show();
 
-                } else Toast.makeText(this,"Вернись на главный экран для смены фона",Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(this, "Вернись на главный экран для смены фона", Toast.LENGTH_LONG).show();
 
-                    break;
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

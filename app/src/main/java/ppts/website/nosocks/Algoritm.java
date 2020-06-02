@@ -2,7 +2,7 @@ package ppts.website.nosocks;
 
 public class Algoritm {
     public String algoritm(String strn) {
-        String mass[][] = new String[4][16];
+        String[][] mass = new String[4][16];
         mass[1][0] = "1";
         mass[2][0] = "17";
         mass[3][0] = "33";
@@ -16,7 +16,7 @@ public class Algoritm {
         //комбинации
         for (int i = 0; i < 16; i++) {
             int counter = i;
-            char bit[] = {'0', '0', '0', '0'};
+            char[] bit = {'0', '0', '0', '0'};
             for (int j = 0; j < 4; j++) {
                 if (counter > 0) {
                     bit[j] = (counter % 2 == 0) ? '0' : '1';
@@ -43,7 +43,7 @@ public class Algoritm {
                 break;
             }
         }
-        int random = (int) Math.round(1+Math.random() *2);
+        int random = (int) Math.round(1 + Math.random() * 2);
 
         return mass[random][randomize_number];
     }
